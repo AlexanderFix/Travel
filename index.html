@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Travel</title>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <header>
+            <section class="header">
+                <div class="logo"><img src="images/logo.png" alt=""></div>
+                <div class="time">9:00-18:00</div>
+                <div class="tel">+38 050 050 0505</div>
+                <div class="search"><input type="search" name="" id="search" placeholder="Поиск"><button><img
+                            src="icons/free-icon-search-3945508.png" alt=""></button>
+                </div>
+            </section>
+        </header>
+        <nav>
+            <section class="nav">
+                <ul>
+                    <li>О компании</li>
+                    <li>Наши туры</li>
+                    <li>Горящие путевки</li>
+                    <li>Контакт</li>
+                </ul>
+            </section>
+        </nav>
+        <section id="media">
+            <video id="movie" autoplay muted>
+                <source src="media/anytour.mp4">
+            </video>
+        </section>
+        <main>
+
+            <section class="company">
+                <h2>О компании</h2>
+                <section class="about_company">
+                    <div class="div_img" id="imgcompany">
+
+                    </div>
+                    <div class="about">
+                        <h2>Откройте новые горизонты</h2>
+                        <div class="about_button">
+                            <button>О компании</button>
+                            <button>Почему выбирают нас</button>
+                            <button>Наша миссия</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente dolorem officiis
+                            consequuntur, aliquid eaque! Illo, praesentium tempora odit quasi aspernatur laudantium
+                            dicta,
+                            aliquid, quaerat illum at sint hic tempore. Officiis nihil ea similique cumque beatae, quo
+                            consequuntur amet, recusandae veritatis omnis illum, maxime laborum repellendus vitae
+                            corporis
+                        </p>
+                        <button id="we_team">Наша команда </button>
+
+                    </div>
+                </section>
+            </section>
+            <section class="tour">
+                <h2>Наши туры</h2>
+                <div class="pic_tour" id="pic_tour">
+
+                </div>
+            </section>
+            <section class="hot_tour">
+                <h2>Горящие путевки</h2>
+                <div class="hot">
+                    <img src="images/htour1.jpg" id="hot" alt="">
+                    <div class="hot_info">
+                        <h3>Бенидорм, Испания</h3>
+                        <div class="reit">
+                            <progress max="100" value="85"></progress>
+                            <p>21 отзыв</p>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus deserunt
+                            praesentium nemo facilis ullam, repellat incidunt corrupti sequi explicabo quia nam quas
+                            cum, reprehenderit cupiditate blanditiis amet consequuntur ipsa quod obcaecati illum!
+                            Consequuntur animi sed nostrum eveniet autem minus mollitia ea reiciendis? Aliquid assumenda
+                            deserunt nesciunt at veniam, dolor doloremque?
+                        </p>
+                        <button>Купить за $790</button>
+                    </div>
+                </div>
+                <div class="hot">
+                    <img src="images/htour2.jpg" alt="">
+                    <div class="hot_info">
+                        <h3>Остров Маврикий, Африка</h3>
+                        <div class="reit">
+                            <progress max="100" value="85"></progress>
+                            <p>16 отзывов</p>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus deserunt
+                            praesentium nemo facilis ullam, repellat incidunt corrupti sequi explicabo quia nam quas
+                            cum, reprehenderit cupiditate blanditiis amet consequuntur ipsa quod obcaecati illum!
+                            Consequuntur animi sed nostrum eveniet autem minus mollitia ea reiciendis? Aliquid assumenda
+                            deserunt nesciunt at veniam, dolor doloremque?
+                        </p>
+                        <button>Купить за $890</button>
+                    </div>
+                </div>
+            </section>
+            <section class="team" id="team">
+                <h2>Наша команда</h2>
+                <div class="profiles">
+                    <div class="profile">
+                        <img src="images/user1.jpg" alt="">
+                        <p>Виоллета Маркова</p>
+                        <p>СЕО</p>
+                        <p>+38 050 050 0505</p>
+                    </div>
+                    <div class="profile">
+                        <img src="images/user2.jpg" alt="">
+                        <p>Василий Артемьев</p>
+                        <p>Турагент</p>
+                        <p>+38 050 050 0506</p>
+                    </div>
+                    <div class="profile">
+                        <img src="images/user3.jpg" alt="">
+                        <p>Белла Фокина</p>
+                        <p>Консультант</p>
+                        <p>+38 050 050 0507</p>
+                    </div>
+                    <div class="profile">
+                        <img src="images/user4.jpg" alt="">
+                        <p>Владимир Егоров</p>
+                        <p>PR менеджер</p>
+                        <p>+38 050 050 0508</p>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <h2>Контакты</h2>
+            </section>
+            <section class="message">
+                <h2>Отправить сообщение</h2>
+                <form class="form_message" action="">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="email" placeholder="E-mail">
+                    <input type="tel" placeholder="Телефон">
+                    <textarea name="message_area" placeholder="Сообщение"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <section class="footer">
+                <div class="contact_info">
+                    <h4>КОНТАКТНАЯ ИНФОРМАЦИЯ</h4>
+                    <p>+38 050 050 0505</p>
+                    <!-- <a href="info@demolink.org">info@demolink.org</a> -->
+                    <p>info@demolink.org</p>
+                    <p>Минск, пр.Победителей,9</p>
+                </div>
+                <div class="footer_menu">
+                    <ul>
+                        <li>
+                            <h4>МЕНЮ САЙТ</h4>
+                        </li>
+                        <li>О компании</li>
+                        <li>Наши туры</li>
+                        <li>Горящие путевки</li>
+                        <li>Наша команда</li>
+                    </ul>
+                </div>
+                <div class="copy">
+                    <button>Наши туры</button>
+                    <p>&#169 2019 Агенство путешествий</p>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <script src="js/travel.js"></script>
+</body>
+
+</html>
