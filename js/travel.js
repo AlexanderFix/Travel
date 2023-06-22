@@ -1,5 +1,5 @@
 
-
+// Кнопка вверх
 
 window.addEventListener('scroll', function() {
     if (this.scrollY  < 500) {
@@ -14,6 +14,10 @@ window.addEventListener('scroll', function() {
         `
     }
   });
+
+  function scrollUp () {
+window.scrollTo(0,0)
+  }
 
 
 

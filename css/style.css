@@ -475,16 +475,21 @@ footer {
 
 
 .material-symbols-outlined {
-  font-size: 60px;
-  position: fixed;
-  bottom: 50px;
-  right: 300px;
-  display: none;
- background: #ccc;
-z-index: 9999;
-  border-radius: 50px;
+
+    position: fixed;
+    bottom: 50px;
+    right: 300px;
+    display: none;
+    z-index: 9999;
 }
 
+.material-symbols-outlined button {
+    background: #ccc;
+    font-size: 60px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+}
 
 @media (max-width: 1154px) {
     .pic_tour {
