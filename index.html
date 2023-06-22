@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
     <title>Travel</title>
 </head>
 
 <body>
+    <button class="material-symbols-outlined" id="showScroll" >
+        arrow_upward
+        
+    </button>
     <div class="wrapper" id="wrapper">
         <header>
             <section class="header">
@@ -25,21 +31,21 @@
         <nav>
             <section class="nav">
                 <ul>
-                    <li>О компании</li>
-                    <li>Наши туры</li>
-                    <li>Горящие путевки</li>
-                    <li>Контакт</li>
+                    <li><a href="#company">О компании</a></li>
+                    <li><a href="#tour">Наши туры</a></li>
+                    <li><a href="#hot_tour">Горящие путевки</a></li>
+                    <li><a href="#contact">Контакты</a></li>
                 </ul>
             </section>
         </nav>
         <section id="media">
-            <video id="movie" autoplay muted>
+            <video id="movie" autoplay muted onclick="player()">
                 <source src="media/anytour.mp4">
             </video>
         </section>
         <main>
 
-            <section class="company">
+            <section id="company">
                 <h2>О компании</h2>
                 <section class="about_company">
                     <div class="div_img" id="imgcompany">
@@ -59,21 +65,20 @@
                             consequuntur amet, recusandae veritatis omnis illum, maxime laborum repellendus vitae
                             corporis
                         </p>
-                        <button id="we_team">Наша команда </button>
-
+                        <a id="we_team" href="#team">Наша команда</a>
                     </div>
                 </section>
             </section>
-            <section class="tour">
+            <section class="tour" id="tour">
                 <h2>Наши туры</h2>
                 <div class="pic_tour" id="pic_tour">
 
                 </div>
             </section>
-            <section class="hot_tour">
+            <section class="hot_tour" id="hot_tour">
                 <h2>Горящие путевки</h2>
                 <div class="hot">
-                    <img src="images/htour1.jpg" id="hot" alt="">
+                    <img src="images/htour1.jpg" alt="">
                     <div class="hot_info">
                         <h3>Бенидорм, Испания</h3>
                         <div class="reit">
@@ -90,7 +95,7 @@
                         <button>Купить за $790</button>
                     </div>
                 </div>
-                <div class="hot">
+                <div class="hot" id="hot">
                     <img src="images/htour2.jpg" alt="">
                     <div class="hot_info">
                         <h3>Остров Маврикий, Африка</h3>
@@ -138,7 +143,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contact">
+            <section class="contact" id="contact">
                 <h2>Контакты</h2>
             </section>
             <section class="message">
@@ -173,11 +178,13 @@
                     </ul>
                 </div>
                 <div class="copy">
-                    <button>Наши туры</button>
+                    <a href="#tour">Наши туры</a>
                     <p>&#169 2019 Агенство путешествий</p>
                 </div>
             </section>
         </footer>
+        <div class=" pic_img" id="modal" onclick="closemodal()">
+        </div>
     </div>
 
     <script src="js/travel.js"></script>

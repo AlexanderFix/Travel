@@ -1,11 +1,30 @@
 
 
 
+window.addEventListener('scroll', function() {
+    if (this.scrollY  < 500) {
+        showScroll.style =  `
+        display: none;
+        opacity: 0;
+        `
+    } else {
+        showScroll.style =  `
+        display: block;
+        opacity: 0.5;
+        `
+    }
+  });
+
+
+
+
 // let movie = document.getElementById('movie')
 // movie.addEventListener('click', player)
-// function player () {
-//     movie.play()
-// }
+function player () {
+    if (movie.paused) movie.play()
+    else { movie.pause()}
+   
+}
 
 
 //  Блок туров
@@ -17,7 +36,7 @@ let ArrTour = {
 let picTour = document.querySelectorAll('.pic_tour');
 
 for (i = 0; i < ArrTour.city.length; i++) {
-    pic_tour.innerHTML += `<div class="pic_img" onclick="showBigPic(${i+1})" id="idpic${i}" >
+    pic_tour.innerHTML += `<div class="pic_img" onclick="showBigPic(${i + 1})" id="idpic${i}" >
 <p>${ArrTour.city[i]}</p>
 <img src="images/trv${i + 1}.jpg">
 </div>`}
@@ -25,36 +44,35 @@ for (i = 0; i < ArrTour.city.length; i++) {
 // Модальное для туров
 function showBigPic(pic) {
 
-    wrapper.innerHTML += `
-    <div class=" pic_img" id="modal" onclick="closemodal()">
-    <img src="images/trv${pic}.jpg" alt="">
-    </div>
-    `
+    modal.style = `display: flex;`
+    modal.innerHTML = `
+        <img src="images/trv${pic}.jpg" alt="">
+       `
 }
 
-function closemodal () {
+function closemodal() {
 
-let modal = document.getElementById('modal')
-wrapper.removeChild(modal)
+    modal.innerHTML = ''
+    modal.style = `display: none;`
 
 }
 
 
-// Плавнная прокрутка на команду
-let scrol = document.getElementById('team')
-let team = document.getElementById('we_team')
+// Плавнная прокрутка 
+// let scrol = document.getElementById('team')
+// let team = document.getElementById('we_team')
 
-function handleButtonClick() {
-    scrol.scrollIntoView({ block: "center", behavior: "smooth" })
-}
+// function handleButtonClick() {
+//     scrol.scrollIntoView({ block: "center", behavior: "smooth" })
+// }
 
-team.addEventListener('click', handleButtonClick)
+// team.addEventListener('click', handleButtonClick)
 
 
 // Слайдер
 for (n = 1; n < 2; n++) {
     imgcompany.innerHTML += `
-<img src="images/${ArrTour.picture[n-1]}" alt="" id="id${n}">
+<img src="images/${ArrTour.picture[n - 1]}" alt="" id="id${n}">
 <img src="images/${ArrTour.picture[n]}" alt="" id="id${n + 1}">
 `
 }
@@ -68,9 +86,7 @@ function delimg() {
     p = 1
 
     if (++count > ArrTour.city.length) count = 1;
-    console.log(count);
     let ff = document.getElementById(`id${id}`);
-    console.log(ff);
     ff.remove();
 
     if (count + 1 > ArrTour.city.length) {
@@ -90,7 +106,7 @@ function delimg() {
 
     if (id == 1) id = 2
     else { id = 1 }
-    console.log(count);
+   
 
     setTimeout(gallery, 2000)
 
