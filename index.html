@@ -8,16 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=96c09aa5-d92f-486a-be19-c1f8bf6635d5&lang=ru_RU" type="text/javascript">
+    </script>
     <title>Travel</title>
 </head>
 
 <body>
-    <div class="material-symbols-outlined" id="showScroll" onclick="scrollUp()">
+  
+    <div class="wrapper" id="wrapper">  <div class="material-symbols-outlined" id="showScroll" onclick="scrollUp()">
         <button>arrow_upward</button>
         
     </div>
-    <div class="wrapper" id="wrapper">
         <header>
             <section class="header">
                 <div class="logo"><img src="images/logo.png" alt=""></div>
@@ -53,12 +54,12 @@
                     </div>
                     <div class="about">
                         <h2>Откройте новые горизонты</h2>
-                        <div class="about_button">
-                            <button>О компании</button>
+                        <div class="about_button" id="about_button">
+                            <!-- <button>О компании</button>
                             <button>Почему выбирают нас</button>
-                            <button>Наша миссия</button>
+                            <button>Наша миссия</button> -->
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente dolorem officiis
+                        <p id="pAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente dolorem officiis
                             consequuntur, aliquid eaque! Illo, praesentium tempora odit quasi aspernatur laudantium
                             dicta,
                             aliquid, quaerat illum at sint hic tempore. Officiis nihil ea similique cumque beatae, quo
@@ -145,6 +146,7 @@
             </section>
             <section class="contact" id="contact">
                 <h2>Контакты</h2>
+                <div id="map" style="width: 100%; height: 500px"></div>
             </section>
             <section class="message">
                 <h2>Отправить сообщение</h2>

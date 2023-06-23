@@ -1,35 +1,54 @@
 
 // Кнопка вверх
 
-window.addEventListener('scroll', function() {
-    if (this.scrollY  < 500) {
-        showScroll.style =  `
+window.addEventListener('scroll', function () {
+    if (this.scrollY < 500) {
+        showScroll.style = `
         display: none;
         opacity: 0;
         `
     } else {
-        showScroll.style =  `
+        showScroll.style = `
         display: block;
         opacity: 0.5;
         `
     }
-  });
+});
 
-  function scrollUp () {
-window.scrollTo(0,0)
-  }
-
-
-
-
-// let movie = document.getElementById('movie')
-// movie.addEventListener('click', player)
-function player () {
-    if (movie.paused) movie.play()
-    else { movie.pause()}
-   
+function scrollUp() {
+    window.scrollTo(0, 0)
 }
 
+
+// Видео
+
+function player() {
+    if (movie.paused) movie.play()
+    else { movie.pause() }
+}
+
+// Блок о компании
+let aboutButtons = ['О компании', 'Почему выбирают нас', 'Наша миссия']
+let about = document.getElementById('about_button')
+let parag = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sapiente dolorem officiisconsequuntur, aliquid eaque! Illo, praesentium tempora odit quasi aspernatur laudantiumdicta,aliquid, quaerat illum at sint hic tempore. Officiis nihil ea similique cumque beatae, quoconsequuntur amet, recusandae veritatis omnis illum, maxime laborum repellendus vitae corporis',
+'haha','good']
+for (button = 0; button < aboutButtons.length; button++) {
+    about.innerHTML += `
+    <button id='but${button}' onclick="activeAbout(this,${button})" class="buttonOff">${aboutButtons[button]}</button>
+    `
+}
+but0.setAttribute('class', 'buttonOn')
+
+function activeAbout(activ, numP) {
+    let allButton = document.querySelectorAll('.about_button>button')
+    allButton.forEach(function (item) {
+        item.setAttribute('class', 'buttonOff')
+    });
+    activ.setAttribute('class', 'buttonOn')
+    // console.log(allButton);
+    pAbout.innerHTML = parag[numP]
+
+}
 
 //  Блок туров
 let ArrTour = {
@@ -62,7 +81,7 @@ function closemodal() {
 }
 
 
-// Плавнная прокрутка 
+// Плавнная прокрутка наша команда
 // let scrol = document.getElementById('team')
 // let team = document.getElementById('we_team')
 
@@ -110,7 +129,7 @@ function delimg() {
 
     if (id == 1) id = 2
     else { id = 1 }
-   
+
 
     setTimeout(gallery, 2000)
 
@@ -136,4 +155,20 @@ function gallery() {
 setTimeout(gallery, 2000)
 setInterval(delimg, 6000);
 
+//Яндекс карты
+ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.75399400, 37.62209300],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 7
+            
+        });myMap.behaviors.disable('scrollZoom')
+    }
 

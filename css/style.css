@@ -181,7 +181,6 @@ video {
 .about_button button {
     border: 1px solid #dcdcdc;
     padding: 12px 11px;
-    background: none;
     width: 30%;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
@@ -478,7 +477,7 @@ footer {
 
     position: fixed;
     bottom: 50px;
-    right: 300px;
+    right: 50px;
     display: none;
     z-index: 9999;
 }
@@ -489,6 +488,15 @@ footer {
     height: 70px;
     width: 70px;
     border-radius: 50px;
+}
+
+.buttonOff {
+    background-color: #fff;
+    color: #000;
+}
+.buttonOn {
+    background: #339a99;
+    color: #fff;
 }
 
 @media (max-width: 1154px) {
